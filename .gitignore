@@ -4,6 +4,7 @@ ehthumbs.db
 Desktop.ini
 
 /node_modules
+*.log
 *~
 *.diff
 *.patch
