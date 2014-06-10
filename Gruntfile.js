@@ -42,6 +42,18 @@ module.exports = function(grunt){
             css: {
                 files: [{ expand: true, cwd: "src/less/css", src: ["*"], dest: "dist/css/" }]
             }
+        },
+
+        cssmin: {
+            add_banner: {
+                options: {
+                    banner: "<%= banner %>\n"
+                },
+                files: {
+                    //'path/to/output.css': ['path/to/**/*.css']
+                    'dist/css/<%= pkg.name %>.min.css': ['dist/css/<%= pkg.name %>.css']
+                }
+            }
         }
 
     });
@@ -50,7 +62,9 @@ module.exports = function(grunt){
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-banner");
     grunt.loadNpmTasks("grunt-contrib-copy");
+    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks("grunt-contrib-cssmin");
 
-    grunt.registerTask('default', ['less:development', 'usebanner', 'copy']);
+    grunt.registerTask('default', ['less:development', 'usebanner', 'copy', 'cssmin']);
     grunt.registerTask('build', ['less:development']);
 }
