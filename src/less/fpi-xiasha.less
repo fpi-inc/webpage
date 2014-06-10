@@ -20,3 +20,58 @@
 	margin: 20px;
 	background-color: #f5f5f5;
 }
+
+//企业监测数据查询
+.fpi-xiasha-company-data-search{
+	.list{
+		line-height: 24px;
+		border-bottom: 1px solid #e6e6e6;
+		background-color: #f5f5f5;
+		overflow: hidden;
+		zoom: 1;
+		padding: 5px;
+		.list-title{
+			display: inline-block;
+			width: 88px;
+			float: left;
+			text-align: right;
+		}
+		.list-content{
+			margin-left: 98px;
+			& ul.list-content-ul{
+				overflow: hidden;
+				margin: 3px 0;
+				& li{
+					margin-right: 8px;
+					float: left;
+					& a{
+						display: inline-block;
+						color: #555555;
+						text-decoration: none;
+						padding: 0 10px;
+						border: 1px solid #f5f5f5;
+						&:hover{
+							.border-radius(16px);
+							border: 1px solid #3eb1d9;
+							background-color: #4fc1e9;
+							color: #fff;
+						}
+					}
+				}
+			}
+			& ul.list-content-ul li.cur{
+				margin-right: 8px;
+				float: left;
+				& a{
+					display: inline-block;
+					color: #fff;
+					text-decoration: none;
+					.border-radius(16px);
+					border: 1px solid #3eb1d9;
+					padding: 0 10px;
+					background-color: #4fc1e9;
+				}
+			}
+		}
+	}
+}

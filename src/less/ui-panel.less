@@ -14,13 +14,28 @@
 			font-size: 14px;
 			line-height: 38px;
 			padding-left: 10px;
+			display: inline-block;
+			float: left;
 		}
 	}
 	.ui-panel-bodyer{
 		& p{
 			font-size: 14px;
-			line-height: 20px;
+			line-height: 24px;
 			color: @wp-content-font-color;
+		}
+		& p.remarks{
+			margin-top: 10px;
+			color: #ff0000;
+			font-size: 12px;
+			& em{
+				font-style: normal;
+				font-size: 18px;
+				display: inline-block;
+				position: relative;
+				top: 6px;
+				margin: 0 5px;
+			}
 		}
 	}
 }
@@ -54,6 +69,35 @@ ul.ui-panel-list-time{
 			display: inline-block;
 			float: right;
 			color: #9f9f9f;
+		}
+	}
+}
+
+ul.ui-panel-list-new{
+	& li{
+		height: 30px;
+		line-height: 30px;
+		zoom: 1;
+		overflow: hidden;
+		& a{
+			display: inline-block;
+			float: left;
+			color: @wp-content-font-color;
+			text-decoration: none;
+			padding-left: 15px;
+			max-width: 235px;
+			.text-ellipsis();
+			&:hover{
+				color: #006699;
+			}
+		}
+		& a.icon-point{
+			background: url("../../images/icon/point.png") no-repeat 0 center;
+		}
+		& span{
+			display: inline-block;
+			color: #9f9f9f;
+			margin-left: 5px;
 		}
 	}
 }
